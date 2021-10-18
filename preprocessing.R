@@ -34,7 +34,10 @@ for(l in c(1:15)){
   cormorbidity[,l] <- m
 }
 colnames(cormorbidity)<-names(disease)
-#cormorbidity$obesity <- 0
-#cormorbidity$obesity[201:400] <- 1
+
+#Run following two lines in training data
+cormorbidity$obesity <- 0
+cormorbidity$obesity[201:400] <- 1
+
 write.csv(cormorbidity,"cormorbidity.csv",row.names = FALSE)
 
