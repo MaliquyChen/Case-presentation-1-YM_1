@@ -1,7 +1,11 @@
+#load disease file to set up the keywords of corcomorbidity
 disease <- read.delim("disease.csv", header=TRUE,sep = ",")
 
+#remember to set path to the folder, and make sure that only caes report files in the folder
 path <- "D://Case Presentation 1 Data//Train_Textual"
 filename <- dir(path)
+
+#main
 cormorbidity <- data.frame(matrix(ncol=15,nrow=length(filename)))
 for(l in c(1:15)){
   YN_value <- matrix("N",nrow = length(filename))
