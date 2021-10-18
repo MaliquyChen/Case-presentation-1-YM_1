@@ -34,16 +34,3 @@ colnames(cormorbidity)<-names(disease)
 #cormorbidity$obesity[201:400] <- 1
 write.csv(cormorbidity,"cormorbidity.csv",row.names = FALSE)
 
-
-
-
-TN <- 187
-FP <- 13
-TP <- 176
-FN <- 24
-precision <- TP/(TP+FP)
-recall <- TP/(TP+FN)
-F_1 <- 2*(precision*recall/(precision+recall))
-
-
-cd <- read.delim(filename[30], header=FALSE,sep = ".")
